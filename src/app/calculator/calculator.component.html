@@ -1,0 +1,20 @@
+<label>
+  param 1:
+  <input #param1 type="number">
+</label>
+<label>
+  param 2:
+  <input #param2 type="number">
+</label>
+<div style="display: inline-block; margin-left: 10px; text-align: center">
+  <select #operator>
+    <option value="+">plus</option>
+    <option value="-">sub</option>
+    <option value="x">multiple</option>
+    <option value=":">divine</option>
+  </select>
+  <button (click)="cal(param1.value,param2.value,operator.value)">calculator</button>
+</div>
+<div style="text-align: left">
+  <h3>result: {{result}}</h3>
+</div>
